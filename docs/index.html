@@ -3,70 +3,132 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Apoth</title>
+    <title>CS7250 - Apoth Demo</title>
+    <style>
+      h1[id]:target, h2[id]:target, h3[id]:target {
+        padding-top: 60px;
+        margin-top: -60px;
+      }
+      div.shared_controls {
+        display: flex;
+        margin-right: 0.5em;
+        gap: 0.5em;
+      }
+      div.shared_controls > div {
+        background-color: white;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        border-style: inset;
+      }
+      form.oi-3a86ea.oi-3a86ea-checkbox {
+        max-width: none;
+      }
+      input[type="file"] {
+        max-width: none;
+      }
+    </style>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- observable -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   </head>
   <body>
 
-  
-  <div class="p-5 bg-secondary">
-    <h1 class="display-5 text-light fw-bold">Apoth</h1>
-  </div>
-  
-  <nav class="navbar navbar-expand-md navbar-secondary sticky-top bg-secondary">
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-  </nav>
-  <ul class="navbar-nav me-auto">
-    <li class="nav-item">
-      <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Graphs</a>
-    </li>
-  </ul>
-  </div>
-  </nav>
-  <div id="observablehq-viewof-csvfile-6bc7e4eb"></div>
-  <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
-  <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
-  <div class="row">
-    <div class="col-md-6">
-      <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
+    <div class="p-3 bg-secondary">
+      <h1 class="display-3 text-light fw-bold">Apoth Demo</h1>
     </div>
-    <div class="col-md-6">
-      <div id="observablehq-followupsHisto-9bb64fd0"></div>
+    <nav class="navbar navbar-expand-md navbar-secondary sticky-top bg-secondary">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#participation">Participation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#ppt_stats">User Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#social_context">Social Context</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Fields</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#dynamic">Less Dynamic</a>
+          </li>
+        </ul>
+      </div>
+      <div class="shared_controls">
+        <div id="observablehq-viewof-csvfile-6bc7e4eb"></div>
+        <div class="ppt_id_select" id="observablehq-viewof-selected_ppt_id-42fd282d"></div>
+      </div>
+    </nav>
+    
+    <div class="container mt-5">
+      <h1 id="participation">1. Participation</h1>
+      <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
+      <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="observablehq-followupsHisto-9bb64fd0"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="observablehq-interVsIntra-5b20baaf"></div>
+        </div>
+      </div>
+      <div id="observablehq-viewof-windowSize-e765f382"></div>
+      <div id="observablehq-viewof-windowAnchor-75094542"></div>
+      <div id="observablehq-viewof-window_options-e2e6c956"></div>
+      <div id="observablehq-windowPlot-ee9a90b5"></div>
+
+      <h1 id="ppt_stats">2. User Stats</h1>
+      <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
+      <div id="observablehq-viewof-selected_agg-6671b713"></div>
+      <div id="observablehq-perUserHisto-5434b4b1"></div>
+
+      <h1 id="social_context">3. Social Context</h1>
+      <div>TODO: Add more stuff to this section or delete it.</div>
+      <div id="observablehq-socialContextHisto-7c36e15e"></div>
+
+
+      <h1 id="dynamic">4. Dynamic Fields</h1>
+      <div id="observablehq-viewof-selection-0f049f42"></div>
+      <div id="observablehq-dynamic_legend-57735805"></div>
+      <div id="observablehq-selectable-26101e4d"></div>
+      <div id="observablehq-viewof-heatX-903215a1"></div>
+      <div id="observablehq-viewof-heatY-dee733b8"></div>
+      <div id="observablehq-viewof-scaling-5b11848e"></div>
+      <div id="observablehq-heatMap-de6eb79b"></div>
+
+      <h1 id="dynamic">5. Less Dynamic</h1>
+      <div id="observablehq-viewof-selectedField-6e7625a6"></div>
+      <div id="observablehq-viewof-selectedFill-7488753a"></div>
+      <div id="observablehq-notVeryDynamic-a28a2397"></div>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
+
+    <br/><br/>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3082">Apoth Development</a></p>
+        </p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <div id="observablehq-interVsIntra-5b20baaf"></div>
-    </div>
-  </div>
-  <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
-  <div id="observablehq-viewof-selected_agg-6671b713"></div>
-  <div id="observablehq-perUserHisto-5434b4b1"></div>
-  <div id="observablehq-socialContextHisto-7c36e15e"></div>
-  <div id="observablehq-viewof-selected_ppt_id-42fd282d"></div>
-  <div id="observablehq-viewof-windowSize-e765f382"></div>
-  <div id="observablehq-viewof-windowAnchor-75094542"></div>
-  <div id="observablehq-viewof-window_options-e2e6c956"></div>
-  <div id="observablehq-windowPlot-ee9a90b5"></div>
-  <div id="observablehq-viewof-selection-0f049f42"></div>
-  <div id="observablehq-dynamic_legend-57735805"></div>
-  <div id="observablehq-selectable-26101e4d"></div>
-  <div id="observablehq-viewof-heatX-903215a1"></div>
-  <div id="observablehq-viewof-heatY-dee733b8"></div>
-  <div id="observablehq-viewof-scaling-5b11848e"></div>
-  <div id="observablehq-heatMap-de6eb79b"></div>
 
 
-
-
-<p>Credit: <a href="https://observablehq.com/@class/apoth-development@2827">Apoth Development</a></p>
-
-<script type="module">
+    <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@2827.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3082.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
@@ -160,6 +222,18 @@ new Runtime().module(define, name => {
     return new Inspector(document.querySelector(
       "#observablehq-heatMap-de6eb79b"
     ));
+  if (name === "viewof selectedField")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selectedField-6e7625a6"
+    ));
+  if (name === "viewof selectedFill")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selectedFill-7488753a"
+    ));
+  if (name === "notVeryDynamic")
+    return new Inspector(document.querySelector(
+      "#observablehq-notVeryDynamic-a28a2397"
+    ));
   return [
     "study_data",
     "engagement_stats_per_day",
@@ -197,10 +271,10 @@ new Runtime().module(define, name => {
     "select_ppt_listener",
     "windowPlotD3",
     "ppt_windowed_marks",
-    "perUserHisto"
+    "perUserHisto",
+    "notVeryDynamic"
   ].includes(name);
 });
 </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   </body>
 </html>
