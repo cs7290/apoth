@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Apoth</title>
+  </head>
+  <body>
+
+  
+  <div class="p-5 bg-secondary">
+    <h1 class="display-5 text-light fw-bold">Apoth</h1>
+  </div>
+  
+  <nav class="navbar navbar-expand-md navbar-secondary sticky-top bg-secondary">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+  </nav>
+  <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+      <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Graphs</a>
+    </li>
+  </ul>
+  </div>
+  </nav>
+  <div id="observablehq-viewof-csvfile-6bc7e4eb"></div>
+  <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
+  <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
+    </div>
+    <div class="col-md-6">
+      <div id="observablehq-followupsHisto-9bb64fd0"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
+    </div>
+    <div class="col-md-6">
+      <div id="observablehq-interVsIntra-5b20baaf"></div>
+    </div>
+  </div>
+  <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
+  <div id="observablehq-viewof-selected_agg-6671b713"></div>
+  <div id="observablehq-perUserHisto-5434b4b1"></div>
+  <div id="observablehq-socialContextHisto-7c36e15e"></div>
+  <div id="observablehq-viewof-selected_ppt_id-42fd282d"></div>
+  <div id="observablehq-viewof-windowSize-e765f382"></div>
+  <div id="observablehq-viewof-windowAnchor-75094542"></div>
+  <div id="observablehq-viewof-window_options-e2e6c956"></div>
+  <div id="observablehq-windowPlot-ee9a90b5"></div>
+  <div id="observablehq-viewof-selection-0f049f42"></div>
+  <div id="observablehq-dynamic_legend-57735805"></div>
+  <div id="observablehq-selectable-26101e4d"></div>
+  <div id="observablehq-viewof-heatX-903215a1"></div>
+  <div id="observablehq-viewof-heatY-dee733b8"></div>
+  <div id="observablehq-viewof-scaling-5b11848e"></div>
+  <div id="observablehq-heatMap-de6eb79b"></div>
+
+
+
+
+<p>Credit: <a href="https://observablehq.com/@class/apoth-development@2827">Apoth Development</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@class/apoth-development@2827.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof csvfile")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-csvfile-6bc7e4eb"
+    ));
+  if (name === "viewof selected_ppt_id")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selected_ppt_id-42fd282d"
+    ));
+  if (name === "viewof selection")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selection-0f049f42"
+    ));
+  if (name === "dynamic_legend")
+    return new Inspector(document.querySelector(
+      "#observablehq-dynamic_legend-57735805"
+    ));
+  if (name === "selectable")
+    return new Inspector(document.querySelector(
+      "#observablehq-selectable-26101e4d"
+    ));
+  if (name === "viewof windowSize")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-windowSize-e765f382"
+    ));
+  if (name === "viewof windowAnchor")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-windowAnchor-75094542"
+    ));
+  if (name === "viewof window_options")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-window_options-e2e6c956"
+    ));
+  if (name === "windowPlot")
+    return new Inspector(document.querySelector(
+      "#observablehq-windowPlot-ee9a90b5"
+    ));
+  if (name === "dailyParticipationPerCalendar")
+    return new Inspector(document.querySelector(
+      "#observablehq-dailyParticipationPerCalendar-e9ff64f8"
+    ));
+  if (name === "dailyParticipationPerOffset")
+    return new Inspector(document.querySelector(
+      "#observablehq-dailyParticipationPerOffset-94f28045"
+    ));
+  if (name === "meanResponseGapHisto")
+    return new Inspector(document.querySelector(
+      "#observablehq-meanResponseGapHisto-f61ec1d6"
+    ));
+  if (name === "followupsHisto")
+    return new Inspector(document.querySelector(
+      "#observablehq-followupsHisto-9bb64fd0"
+    ));
+  if (name === "gapsVsFollowups")
+    return new Inspector(document.querySelector(
+      "#observablehq-gapsVsFollowups-c3e549e6"
+    ));
+  if (name === "interVsIntra")
+    return new Inspector(document.querySelector(
+      "#observablehq-interVsIntra-5b20baaf"
+    ));
+  if (name === "viewof selected_feat")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selected_feat-061c3e4d"
+    ));
+  if (name === "viewof selected_agg")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-selected_agg-6671b713"
+    ));
+  if (name === "perUserHisto")
+    return new Inspector(document.querySelector(
+      "#observablehq-perUserHisto-5434b4b1"
+    ));
+  if (name === "socialContextHisto")
+    return new Inspector(document.querySelector(
+      "#observablehq-socialContextHisto-7c36e15e"
+    ));
+  if (name === "viewof heatX")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-heatX-903215a1"
+    ));
+  if (name === "viewof heatY")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-heatY-dee733b8"
+    ));
+  if (name === "viewof scaling")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-scaling-5b11848e"
+    ));
+  if (name === "heatMap")
+    return new Inspector(document.querySelector(
+      "#observablehq-heatMap-de6eb79b"
+    ));
+  return [
+    "study_data",
+    "engagement_stats_per_day",
+    "stats_per_day_ppt",
+    "selectable",
+    "stats_per_feature",
+    "stats_per_user",
+    "daily_response_count_per_user",
+    "affect_daily_summary",
+    "heatMap",
+    "dynamic_feats",
+    "eg_time_facets",
+    "study_data_dropna",
+    "dailyParticipationPerCalendar",
+    "dailyParticipationPerOffset",
+    "at_least_one_significant_response_gap",
+    "total_lapses",
+    "never_returned",
+    "ultimately_returned",
+    "user_stats",
+    "ppt_ids",
+    "social_context_props",
+    "daily_response_counts",
+    "window_stats",
+    "viewof selection",
+    "viewof heatX",
+    "viewof heatY",
+    "dropout_stats",
+    "viewof selected_ppt_id",
+    "averageWindow",
+    "windowPlot",
+    "windowSvg",
+    "window_marks_per_ppt",
+    "dynamic_legend",
+    "select_ppt_listener",
+    "windowPlotD3",
+    "ppt_windowed_marks",
+    "perUserHisto"
+  ].includes(name);
+});
+</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  </body>
+</html>
