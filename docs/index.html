@@ -72,7 +72,7 @@
             <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Fields</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fw-bold" href="#less_dynamic">Less Dynamic</a>
+            <a class="nav-link text-light fw-bold" href="#time_facets">Time Facets</a>
           </li>
         </ul>
       </div>
@@ -127,7 +127,7 @@
       <div id="observablehq-viewof-scaling-5b11848e"></div>
       <div id="observablehq-heatMap-de6eb79b"></div>
 
-      <h1 id="less_dynamic">5. Less Dynamic</h1>
+      <h1 id="time_facets">5. Time Facets</h1>
       <div id="observablehq-viewof-selectedField-6e7625a6"></div>
       <div id="observablehq-viewof-selectedFill-7488753a"></div>
       <div class="lilhisto_container">
@@ -140,6 +140,7 @@
       </div>
       <div id="observablehq-viewof-x_facet-64c27e98"></div>
       <div id="observablehq-viewof-y_facet-f89fca7b"></div>
+      <div id="observablehq-viewof-timeFacetSelectedFill-192b4b5b"></div>
       <div id="observablehq-resolvedFacetPlot-40273e76"></div>
 
     </div>
@@ -148,7 +149,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3212">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3262">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -156,7 +157,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3212.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3262.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
@@ -277,6 +278,10 @@ new Runtime().module(define, name => {
   if (name === "viewof y_facet")
     return new Inspector(document.querySelector(
       "#observablehq-viewof-y_facet-f89fca7b"
+    ));
+  if (name === "viewof timeFacetSelectedFill")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-timeFacetSelectedFill-192b4b5b"
     ));
   if (name === "resolvedFacetPlot")
     return new Inspector(document.querySelector(
