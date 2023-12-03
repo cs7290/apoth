@@ -26,6 +26,23 @@
       input[type="file"] {
         max-width: none;
       }
+      div.lilhisto_container {
+        display: flex;
+        align-items: stretch;
+      }
+      div.lilhisto_container > div {
+        flex: 5;
+      }
+      div.lilhisto_container > div.lilhisto {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+      }
+      /*
+      div.lilhisto_container > div.lilhisto > div.observablehq {
+        flex: 1;
+      }
+      */
     </style>
 
     <!-- bootstrap -->
@@ -55,7 +72,7 @@
             <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Fields</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fw-bold" href="#dynamic">Less Dynamic</a>
+            <a class="nav-link text-light fw-bold" href="#less_dynamic">Less Dynamic</a>
           </li>
         </ul>
       </div>
@@ -69,6 +86,7 @@
       <h1 id="participation">1. Participation</h1>
       <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
       <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+      <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
       <div class="row">
         <div class="col-md-6">
           <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
@@ -85,12 +103,12 @@
           <div id="observablehq-interVsIntra-5b20baaf"></div>
         </div>
       </div>
+
+      <h1 id="ppt_stats">2. User Stats</h1>
       <div id="observablehq-viewof-windowSize-e765f382"></div>
       <div id="observablehq-viewof-windowAnchor-75094542"></div>
       <div id="observablehq-viewof-window_options-e2e6c956"></div>
       <div id="observablehq-windowPlot-ee9a90b5"></div>
-
-      <h1 id="ppt_stats">2. User Stats</h1>
       <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
       <div id="observablehq-viewof-selected_agg-6671b713"></div>
       <div id="observablehq-perUserHisto-5434b4b1"></div>
@@ -109,10 +127,20 @@
       <div id="observablehq-viewof-scaling-5b11848e"></div>
       <div id="observablehq-heatMap-de6eb79b"></div>
 
-      <h1 id="dynamic">5. Less Dynamic</h1>
+      <h1 id="less_dynamic">5. Less Dynamic</h1>
       <div id="observablehq-viewof-selectedField-6e7625a6"></div>
       <div id="observablehq-viewof-selectedFill-7488753a"></div>
-      <div id="observablehq-notVeryDynamic-a28a2397"></div>
+      <div class="lilhisto_container">
+        <div>
+          <div id="observablehq-notVeryDynamic-a28a2397"></div>
+        </div>
+        <div class="lilhisto">
+          <div id="observablehq-testSmallHisto-a5e16098"></div>
+        </div>
+      </div>
+      <div id="observablehq-viewof-x_facet-64c27e98"></div>
+      <div id="observablehq-viewof-y_facet-f89fca7b"></div>
+      <div id="observablehq-resolvedFacetPlot-40273e76"></div>
 
     </div>
 
@@ -120,7 +148,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3082">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3212">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -128,7 +156,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3082.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3212.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
@@ -173,6 +201,10 @@ new Runtime().module(define, name => {
   if (name === "dailyParticipationPerOffset")
     return new Inspector(document.querySelector(
       "#observablehq-dailyParticipationPerOffset-94f28045"
+    ));
+  if (name === "gaps_and_lapses_desc")
+    return new Inspector(document.querySelector(
+      "#observablehq-gaps_and_lapses_desc-97488cbb"
     ));
   if (name === "meanResponseGapHisto")
     return new Inspector(document.querySelector(
@@ -234,6 +266,22 @@ new Runtime().module(define, name => {
     return new Inspector(document.querySelector(
       "#observablehq-notVeryDynamic-a28a2397"
     ));
+  if (name === "testSmallHisto")
+    return new Inspector(document.querySelector(
+      "#observablehq-testSmallHisto-a5e16098"
+    ));
+  if (name === "viewof x_facet")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-x_facet-64c27e98"
+    ));
+  if (name === "viewof y_facet")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-y_facet-f89fca7b"
+    ));
+  if (name === "resolvedFacetPlot")
+    return new Inspector(document.querySelector(
+      "#observablehq-resolvedFacetPlot-40273e76"
+    ));
   return [
     "study_data",
     "engagement_stats_per_day",
@@ -272,7 +320,10 @@ new Runtime().module(define, name => {
     "windowPlotD3",
     "ppt_windowed_marks",
     "perUserHisto",
-    "notVeryDynamic"
+    "notVeryDynamic",
+    "resolvedFacetPlot",
+    "discrete",
+    "continuous"
   ].includes(name);
 });
 </script>
