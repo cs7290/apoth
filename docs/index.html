@@ -38,6 +38,10 @@
         align-items: flex-end;
         flex: 1;
       }
+
+      .bg-accent {
+        background-color: #5F9EA0;
+      }
       /*
       div.lilhisto_container > div.lilhisto > div.observablehq {
         flex: 1;
@@ -53,10 +57,10 @@
   </head>
   <body>
 
-    <div class="p-3 bg-secondary">
+    <div class="p-3 bg-accent">
       <h1 class="display-3 text-light fw-bold">Apoth Demo</h1>
     </div>
-    <nav class="navbar navbar-expand-md navbar-secondary sticky-top bg-secondary">
+    <nav class="navbar navbar-expand-md navbar-secondary sticky-top bg-accent">
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
@@ -103,6 +107,7 @@
           <div id="observablehq-interVsIntra-5b20baaf"></div>
         </div>
       </div>
+      <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
 
       <h1 id="ppt_stats">2. User Stats</h1>
       <div id="observablehq-viewof-windowSize-e765f382"></div>
@@ -149,7 +154,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3262">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3326">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -157,7 +162,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3262.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3326.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
@@ -222,6 +227,10 @@ new Runtime().module(define, name => {
   if (name === "interVsIntra")
     return new Inspector(document.querySelector(
       "#observablehq-interVsIntra-5b20baaf"
+    ));
+  if (name === "viewof show_selected_ppt_selection")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-show_selected_ppt_selection-6121c191"
     ));
   if (name === "viewof selected_feat")
     return new Inspector(document.querySelector(
@@ -328,7 +337,10 @@ new Runtime().module(define, name => {
     "notVeryDynamic",
     "resolvedFacetPlot",
     "discrete",
-    "continuous"
+    "continuous",
+    "show_selected_ppt",
+    "gapsVsFollowups",
+    "interVsIntra"
   ].includes(name);
 });
 </script>
