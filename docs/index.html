@@ -93,20 +93,12 @@
         <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
         <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
         <div class="row">
-          <div class="col-md-6">
-            <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
-          </div>
-          <div class="col-md-6">
-            <div id="observablehq-followupsHisto-9bb64fd0"></div>
-          </div>
+          <div id="observablehq-meanResponseGapHisto-f61ec1d6" class="col-md-6"></div>
+          <div id="observablehq-interVsIntra-5b20baaf" class="col-md-6"></div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
-          </div>
-          <div class="col-md-6">
-            <div id="observablehq-interVsIntra-5b20baaf"></div>
-          </div>
+          <div id="observablehq-gapsVsFollowups-c3e549e6" class="col-md-6"></div>
+          <div id="observablehq-followupsHistoHorizontal-9bb64fd0" class="col-md-6"></div>
         </div>
         <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
       </section>
@@ -149,7 +141,7 @@
             <div id="observablehq-notVeryDynamic-a28a2397"></div>
           </div>
           <div class="lilhisto">
-            <div id="observablehq-testSmallHisto-a5e16098"></div>
+            <div id="observablehq-smallHisto-1b48a6b2"></div>
           </div>
         </div>
         <div id="observablehq-viewof-x_facet-64c27e98"></div>
@@ -164,7 +156,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3375">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3436">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -172,7 +164,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3375.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3436.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
@@ -226,9 +218,9 @@ new Runtime().module(define, name => {
     return new Inspector(document.querySelector(
       "#observablehq-meanResponseGapHisto-f61ec1d6"
     ));
-  if (name === "followupsHisto")
+  if (name === "followupsHistoHorizontal")
     return new Inspector(document.querySelector(
-      "#observablehq-followupsHisto-9bb64fd0"
+      "#observablehq-followupsHistoHorizontal-9bb64fd0"
     ));
   if (name === "gapsVsFollowups")
     return new Inspector(document.querySelector(
@@ -286,9 +278,9 @@ new Runtime().module(define, name => {
     return new Inspector(document.querySelector(
       "#observablehq-notVeryDynamic-a28a2397"
     ));
-  if (name === "testSmallHisto")
+  if (name === "smallHisto")
     return new Inspector(document.querySelector(
-      "#observablehq-testSmallHisto-a5e16098"
+      "#observablehq-smallHisto-1b48a6b2"
     ));
   if (name === "viewof x_facet")
     return new Inspector(document.querySelector(
@@ -353,6 +345,6 @@ new Runtime().module(define, name => {
     "interVsIntra"
   ].includes(name);
 });
-</script>
+    </script>
   </body>
 </html>
