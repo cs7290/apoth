@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS7250 - Apoth Demo</title>
     <style>
+      /* color to match a rough "theme" */
+      .bg-accent {
+        background-color: #5F9EA0;
+      }
+
+      /* This is a hack to get proper navbar position during navigation */
       section[id]:target {
         padding-top: 60px;
         margin-top: -60px;
       }
+
+      /* file select and ppt select */
       div.shared_controls {
         display: flex;
         margin-right: 0.5em;
@@ -20,12 +28,18 @@
         padding-left: 0.5em;
         border-style: inset;
       }
-      form.oi-3a86ea.oi-3a86ea-checkbox {
-        max-width: none;
-      }
+
+      /* NOTE: This didn't accomplish desired effect (display full file name) */
       input[type="file"] {
         max-width: none;
       }
+
+      /* This allows checkboxes and radio buttons to span the width of the page */
+      form.oi-3a86ea.oi-3a86ea-checkbox {
+        max-width: none;
+      }
+
+      /* This is working well enough, but we never obtained truly responsive resize */
       div.lilhisto_container {
         display: flex;
         align-items: stretch;
@@ -38,15 +52,6 @@
         align-items: flex-end;
         flex: 1;
       }
-
-      .bg-accent {
-        background-color: #5F9EA0;
-      }
-      /*
-      div.lilhisto_container > div.lilhisto > div.observablehq {
-        flex: 1;
-      }
-      */
     </style>
 
     <!-- bootstrap -->
