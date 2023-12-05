@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS7250 - Apoth Demo</title>
     <style>
-      h1[id]:target, h2[id]:target, h3[id]:target {
+      section[id]:target {
         padding-top: 60px;
         margin-top: -60px;
       }
@@ -87,66 +87,76 @@
     </nav>
     
     <div class="container mt-5">
-      <h1 id="participation">1. Participation</h1>
-      <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
-      <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
-      <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
+      <section id="participation">
+        <h1>1. Participation</h1>
+        <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
+        <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+        <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="observablehq-meanResponseGapHisto-f61ec1d6"></div>
+          </div>
+          <div class="col-md-6">
+            <div id="observablehq-followupsHisto-9bb64fd0"></div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <div id="observablehq-followupsHisto-9bb64fd0"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
+          </div>
+          <div class="col-md-6">
+            <div id="observablehq-interVsIntra-5b20baaf"></div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div id="observablehq-gapsVsFollowups-c3e549e6"></div>
-        </div>
-        <div class="col-md-6">
-          <div id="observablehq-interVsIntra-5b20baaf"></div>
-        </div>
-      </div>
-      <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
+        <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
+      </section>
 
-      <h1 id="ppt_stats">2. User Stats</h1>
-      <div id="observablehq-viewof-windowSize-e765f382"></div>
-      <div id="observablehq-viewof-windowAnchor-75094542"></div>
-      <div id="observablehq-viewof-window_options-e2e6c956"></div>
-      <div id="observablehq-windowPlot-ee9a90b5"></div>
-      <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
-      <div id="observablehq-viewof-selected_agg-6671b713"></div>
-      <div id="observablehq-perUserHisto-5434b4b1"></div>
+      <section id="ppt_stats">
+        <h1>2. User Stats</h1>
+        <div id="observablehq-viewof-windowSize-e765f382"></div>
+        <div id="observablehq-viewof-windowAnchor-75094542"></div>
+        <div id="observablehq-viewof-window_options-e2e6c956"></div>
+        <div id="observablehq-windowPlot-ee9a90b5"></div>
+        <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
+        <div id="observablehq-viewof-selected_agg-6671b713"></div>
+        <div id="observablehq-perUserHisto-5434b4b1"></div>
+      </section>
 
-      <h1 id="social_context">3. Social Context</h1>
-      <div>TODO: Add more stuff to this section or delete it.</div>
-      <div id="observablehq-socialContextHisto-7c36e15e"></div>
+      <section id="social_context">
+        <h1>3. Social Context</h1>
+        <div>TODO: Add more stuff to this section or delete it.</div>
+        <div id="observablehq-socialContextHisto-7c36e15e"></div>
+      </section>
 
 
-      <h1 id="dynamic">4. Dynamic Fields</h1>
-      <div id="observablehq-viewof-selection-0f049f42"></div>
-      <div id="observablehq-dynamic_legend-57735805"></div>
-      <div id="observablehq-selectable-26101e4d"></div>
-      <div id="observablehq-viewof-heatX-903215a1"></div>
-      <div id="observablehq-viewof-heatY-dee733b8"></div>
-      <div id="observablehq-viewof-scaling-5b11848e"></div>
-      <div id="observablehq-heatMap-de6eb79b"></div>
+      <section id="dynamic">
+        <h1>4. Dynamic Fields</h1>
+        <div id="observablehq-viewof-selection-0f049f42"></div>
+        <div id="observablehq-dynamic_legend-57735805"></div>
+        <div id="observablehq-selectable-26101e4d"></div>
+        <div id="observablehq-viewof-heatX-903215a1"></div>
+        <div id="observablehq-viewof-heatY-dee733b8"></div>
+        <div id="observablehq-viewof-scaling-5b11848e"></div>
+        <div id="observablehq-heatMap-de6eb79b"></div>
+      </section>
 
-      <h1 id="time_facets">5. Time Facets</h1>
-      <div id="observablehq-viewof-selectedField-6e7625a6"></div>
-      <div id="observablehq-viewof-selectedFill-7488753a"></div>
-      <div class="lilhisto_container">
-        <div>
-          <div id="observablehq-notVeryDynamic-a28a2397"></div>
+      <section id="time_facets">
+        <h1>5. Time Facets</h1>
+        <div id="observablehq-viewof-selectedField-6e7625a6"></div>
+        <div id="observablehq-viewof-selectedFill-7488753a"></div>
+        <div class="lilhisto_container">
+          <div>
+            <div id="observablehq-notVeryDynamic-a28a2397"></div>
+          </div>
+          <div class="lilhisto">
+            <div id="observablehq-testSmallHisto-a5e16098"></div>
+          </div>
         </div>
-        <div class="lilhisto">
-          <div id="observablehq-testSmallHisto-a5e16098"></div>
-        </div>
-      </div>
-      <div id="observablehq-viewof-x_facet-64c27e98"></div>
-      <div id="observablehq-viewof-y_facet-f89fca7b"></div>
-      <div id="observablehq-viewof-timeFacetSelectedFill-192b4b5b"></div>
-      <div id="observablehq-resolvedFacetPlot-40273e76"></div>
+        <div id="observablehq-viewof-x_facet-64c27e98"></div>
+        <div id="observablehq-viewof-y_facet-f89fca7b"></div>
+        <div id="observablehq-viewof-timeFacetSelectedFill-192b4b5b"></div>
+        <div id="observablehq-resolvedFacetPlot-40273e76"></div>
+      </section>
 
     </div>
 
@@ -154,7 +164,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3369">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3375">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -162,7 +172,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3369.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3375.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
