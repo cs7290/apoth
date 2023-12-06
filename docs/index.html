@@ -52,6 +52,34 @@
         align-items: flex-end;
         flex: 1;
       }
+
+      /*
+          adapted from SO:
+            https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-horizontal-rule
+            https://stackoverflow.com/a/26634224
+      */
+      .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+/*      .separator::before,*/
+      .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #000;
+      }
+
+      .separator:not(:empty)::before {
+        margin-right: .25em;
+      }
+
+      .separator:not(:empty)::after {
+        margin-left: .25em;
+      }
     </style>
 
     <!-- bootstrap -->
@@ -92,6 +120,7 @@
 
       <section id="findings">
         <h1>1. Findings</h1>
+        <div class="separator">Investigating Loneliness</div>
         <div class="row">
           <div id="observablehq-egStory-f9491ad1" class="col-md-6"></div>
           <div id="observablehq-egRef-02fa135c" class="col-md-6"></div>
@@ -107,12 +136,12 @@
 
       <section id="ppt_stats">
         <h1>2. User Stats</h1>
+        <div class="separator">Population Distributions</div>
         <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
         <div id="observablehq-viewof-selected_agg-6671b713"></div>
         <div id="observablehq-perUserHisto-5434b4b1"></div>
-        
-        <hr>
-        <h2>Over Time</h2>
+
+        <div class="separator">All Scores Over Time</div>
         <div id="observablehq-viewof-selectedField-6e7625a6"></div>
         <div id="observablehq-viewof-selectedFill-7488753a"></div>
         <div class="lilhisto_container">
@@ -127,8 +156,14 @@
 
       <section id="participation">
         <h1>3. Participation</h1>
+        <div class="separator">Total Participation Over Time</div>
         <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
         <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+        <p>
+          Given such a small dataset with such a tight range of dates, the participation trend per calendar day is not distinct from the participation trend per day in study. In practice, we expect to detect different effects in these two plots.
+        </p>
+
+        <div class="separator">Response Gaps</div>
         <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
         <div class="row">
           <div id="observablehq-meanResponseGapHisto-f61ec1d6" class="col-md-6"></div>
@@ -140,8 +175,7 @@
         </div>
         <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
 
-        <hr>
-        <h2>Moving Average</h2>
+        <div class="separator">Moving Average Participation Level</div>
         <div id="observablehq-viewof-windowSize-e765f382"></div>
         <div id="observablehq-viewof-windowAnchor-75094542"></div>
         <div id="observablehq-viewof-window_options-e2e6c956"></div>
@@ -166,7 +200,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3814">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3828">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -174,7 +208,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3814.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3828.js?v=4";
 new Runtime().module(define, name => {
   if (name === "egStory")
     return new Inspector(document.querySelector(
