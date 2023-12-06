@@ -7,13 +7,13 @@
     <style>
       /* color to match a rough "theme" */
       .bg-accent {
-        background-color: #5F9EA0;
+        background-color: #003333;
       }
 
       /* This is a hack to get proper navbar position during navigation */
       section[id]:target {
-        padding-top: 60px;
-        margin-top: -60px;
+        padding-top: 58px;
+        margin-top: -58px;
       }
 
       /* file select and ppt select */
@@ -69,19 +69,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link text-light fw-bold" href="#participation">Participation</a>
+            <a class="nav-link text-light fw-bold" href="#findings">Findings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light fw-bold" href="#ppt_stats">User Stats</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fw-bold" href="#social_context">Social Context</a>
+            <a class="nav-link text-light fw-bold" href="#participation">Participation</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Fields</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light fw-bold" href="#time_facets">Time Facets</a>
           </li>
         </ul>
       </div>
@@ -92,8 +89,44 @@
     </nav>
     
     <div class="container mt-5">
+
+      <section id="findings">
+        <h1>1. Findings</h1>
+        <div class="row">
+          <div id="observablehq-egStory-f9491ad1" class="col-md-6"></div>
+          <div id="observablehq-egRef-02fa135c" class="col-md-6"></div>
+        </div>
+        <div id="observablehq-findingsDesc1-0a623c4a"></div>
+        <div id="observablehq-socialContextHisto-7c36e15e"></div>
+        <div class="row">
+          <div id="observablehq-angrySadHeatMap-c18001ed" class="col-md-4"></div>
+          <div id="observablehq-sadHopelessHeatMap-5d4e6ad4" class="col-md-4"></div>
+          <div id="observablehq-hopelessAngryHeatMap-514963b3" class="col-md-4"></div>
+        </div>
+      </section>
+
+      <section id="ppt_stats">
+        <h1>2. User Stats</h1>
+        <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
+        <div id="observablehq-viewof-selected_agg-6671b713"></div>
+        <div id="observablehq-perUserHisto-5434b4b1"></div>
+        
+        <hr>
+        <h2>Over Time</h2>
+        <div id="observablehq-viewof-selectedField-6e7625a6"></div>
+        <div id="observablehq-viewof-selectedFill-7488753a"></div>
+        <div class="lilhisto_container">
+          <div>
+            <div id="observablehq-notVeryDynamic-a28a2397"></div>
+          </div>
+          <div class="lilhisto">
+            <div id="observablehq-smallHisto-1b48a6b2"></div>
+          </div>
+        </div>
+      </section>
+
       <section id="participation">
-        <h1>1. Participation</h1>
+        <h1>3. Participation</h1>
         <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
         <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
         <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
@@ -106,23 +139,13 @@
           <div id="observablehq-followupsHistoHorizontal-9bb64fd0" class="col-md-6"></div>
         </div>
         <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
-      </section>
 
-      <section id="ppt_stats">
-        <h1>2. User Stats</h1>
+        <hr>
+        <h2>Moving Average</h2>
         <div id="observablehq-viewof-windowSize-e765f382"></div>
         <div id="observablehq-viewof-windowAnchor-75094542"></div>
         <div id="observablehq-viewof-window_options-e2e6c956"></div>
         <div id="observablehq-windowPlot-ee9a90b5"></div>
-        <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
-        <div id="observablehq-viewof-selected_agg-6671b713"></div>
-        <div id="observablehq-perUserHisto-5434b4b1"></div>
-      </section>
-
-      <section id="social_context">
-        <h1>3. Social Context</h1>
-        <div>TODO: Add more stuff to this section or delete it.</div>
-        <div id="observablehq-socialContextHisto-7c36e15e"></div>
       </section>
 
 
@@ -134,25 +157,7 @@
         <div id="observablehq-viewof-heatX-903215a1"></div>
         <div id="observablehq-viewof-heatY-dee733b8"></div>
         <div id="observablehq-viewof-scaling-5b11848e"></div>
-        <div id="observablehq-heatMap-de6eb79b"></div>
-      </section>
-
-      <section id="time_facets">
-        <h1>5. Time Facets</h1>
-        <div id="observablehq-viewof-selectedField-6e7625a6"></div>
-        <div id="observablehq-viewof-selectedFill-7488753a"></div>
-        <div class="lilhisto_container">
-          <div>
-            <div id="observablehq-notVeryDynamic-a28a2397"></div>
-          </div>
-          <div class="lilhisto">
-            <div id="observablehq-smallHisto-1b48a6b2"></div>
-          </div>
-        </div>
-        <div id="observablehq-viewof-x_facet-64c27e98"></div>
-        <div id="observablehq-viewof-y_facet-f89fca7b"></div>
-        <div id="observablehq-viewof-timeFacetSelectedFill-192b4b5b"></div>
-        <div id="observablehq-resolvedFacetPlot-40273e76"></div>
+        <div id="observablehq-heatMap2-de6eb79b"></div>
       </section>
 
     </div>
@@ -161,7 +166,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3528">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3814">Apoth Development</a></p>
         </p>
       </div>
     </div>
@@ -169,8 +174,32 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3528.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3814.js?v=4";
 new Runtime().module(define, name => {
+  if (name === "egStory")
+    return new Inspector(document.querySelector(
+      "#observablehq-egStory-f9491ad1"
+    ));
+  if (name === "egRef")
+    return new Inspector(document.querySelector(
+      "#observablehq-egRef-02fa135c"
+    ));
+  if (name === "findingsDesc1")
+    return new Inspector(document.querySelector(
+      "#observablehq-findingsDesc1-0a623c4a"
+    ));
+  if (name === "angrySadHeatMap")
+    return new Inspector(document.querySelector(
+      "#observablehq-angrySadHeatMap-c18001ed"
+    ));
+  if (name === "sadHopelessHeatMap")
+    return new Inspector(document.querySelector(
+      "#observablehq-sadHopelessHeatMap-5d4e6ad4"
+    ));
+  if (name === "hopelessAngryHeatMap")
+    return new Inspector(document.querySelector(
+      "#observablehq-hopelessAngryHeatMap-514963b3"
+    ));
   if (name === "viewof csvfile")
     return new Inspector(document.querySelector(
       "#observablehq-viewof-csvfile-6bc7e4eb"
@@ -267,17 +296,13 @@ new Runtime().module(define, name => {
     return new Inspector(document.querySelector(
       "#observablehq-viewof-scaling-5b11848e"
     ));
-  if (name === "heatMap")
+  if (name === "heatMap2")
     return new Inspector(document.querySelector(
-      "#observablehq-heatMap-de6eb79b"
+      "#observablehq-heatMap2-de6eb79b"
     ));
   if (name === "viewof selectedField")
     return new Inspector(document.querySelector(
       "#observablehq-viewof-selectedField-6e7625a6"
-    ));
-  if (name === "viewof selectedFill")
-    return new Inspector(document.querySelector(
-      "#observablehq-viewof-selectedFill-7488753a"
     ));
   if (name === "notVeryDynamic")
     return new Inspector(document.querySelector(
@@ -286,22 +311,6 @@ new Runtime().module(define, name => {
   if (name === "smallHisto")
     return new Inspector(document.querySelector(
       "#observablehq-smallHisto-1b48a6b2"
-    ));
-  if (name === "viewof x_facet")
-    return new Inspector(document.querySelector(
-      "#observablehq-viewof-x_facet-64c27e98"
-    ));
-  if (name === "viewof y_facet")
-    return new Inspector(document.querySelector(
-      "#observablehq-viewof-y_facet-f89fca7b"
-    ));
-  if (name === "viewof timeFacetSelectedFill")
-    return new Inspector(document.querySelector(
-      "#observablehq-viewof-timeFacetSelectedFill-192b4b5b"
-    ));
-  if (name === "resolvedFacetPlot")
-    return new Inspector(document.querySelector(
-      "#observablehq-resolvedFacetPlot-40273e76"
     ));
   return [
     "study_data",
@@ -312,9 +321,8 @@ new Runtime().module(define, name => {
     "stats_per_user",
     "daily_response_count_per_user",
     "affect_daily_summary",
-    "heatMap",
+    "heatMap2",
     "dynamic_feats",
-    "eg_time_facets",
     "study_data_dropna",
     "dailyParticipationPerCalendar",
     "dailyParticipationPerOffset",
@@ -342,7 +350,6 @@ new Runtime().module(define, name => {
     "ppt_windowed_marks",
     "perUserHisto",
     "notVeryDynamic",
-    "resolvedFacetPlot",
     "discrete",
     "continuous",
     "show_selected_ppt",
