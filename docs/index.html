@@ -106,7 +106,13 @@
             <a class="nav-link text-light fw-bold" href="#participation">Participation</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#gaps">Response Gaps</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link text-light fw-bold" href="#dynamic">Dynamic Fields</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="#time_facets">Time Facets</a>
           </li>
         </ul>
       </div>
@@ -120,7 +126,6 @@
 
       <section id="findings">
         <h1>1. Findings</h1>
-        <div class="separator">Investigating Loneliness</div>
         <div class="row">
           <div id="observablehq-egStory-f9491ad1" class="col-md-6"></div>
           <div id="observablehq-egRef-02fa135c" class="col-md-6"></div>
@@ -136,34 +141,28 @@
 
       <section id="ppt_stats">
         <h1>2. User Stats</h1>
-        <div class="separator">Population Distributions</div>
         <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
         <div id="observablehq-viewof-selected_agg-6671b713"></div>
         <div id="observablehq-perUserHisto-5434b4b1"></div>
-
-        <div class="separator">All Scores Over Time</div>
-        <div id="observablehq-viewof-selectedField-6e7625a6"></div>
-        <div id="observablehq-viewof-selectedFill-7488753a"></div>
-        <div class="lilhisto_container">
-          <div>
-            <div id="observablehq-notVeryDynamic-a28a2397"></div>
-          </div>
-          <div class="lilhisto">
-            <div id="observablehq-smallHisto-1b48a6b2"></div>
-          </div>
-        </div>
       </section>
 
       <section id="participation">
         <h1>3. Participation</h1>
-        <div class="separator">Total Participation Over Time</div>
         <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
         <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
         <p>
           Given such a small dataset with such a tight range of dates, the participation trend per calendar day is not distinct from the participation trend per day in study. In practice, we expect to detect different effects in these two plots.
         </p>
 
-        <div class="separator">Response Gaps</div>
+        <!-- user trend -->
+        <div id="observablehq-viewof-windowSize-e765f382"></div>
+        <div id="observablehq-viewof-windowAnchor-75094542"></div>
+        <div id="observablehq-viewof-window_options-e2e6c956"></div>
+        <div id="observablehq-windowPlot-ee9a90b5"></div>
+      </section>
+
+      <section id="gaps">
+        <h1>4. Response Gaps</h1>
         <div id="observablehq-gaps_and_lapses_desc-97488cbb"></div>
         <div class="row">
           <div id="observablehq-meanResponseGapHisto-f61ec1d6" class="col-md-6"></div>
@@ -175,16 +174,11 @@
         </div>
         <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
 
-        <div class="separator">Moving Average Participation Level</div>
-        <div id="observablehq-viewof-windowSize-e765f382"></div>
-        <div id="observablehq-viewof-windowAnchor-75094542"></div>
-        <div id="observablehq-viewof-window_options-e2e6c956"></div>
-        <div id="observablehq-windowPlot-ee9a90b5"></div>
       </section>
 
 
       <section id="dynamic">
-        <h1>4. Dynamic Fields</h1>
+        <h1>5. Dynamic Fields</h1>
         <div id="observablehq-viewof-selection-0f049f42"></div>
         <div id="observablehq-dynamic_legend-57735805"></div>
         <div id="observablehq-selectable-26101e4d"></div>
@@ -192,6 +186,24 @@
         <div id="observablehq-viewof-heatY-dee733b8"></div>
         <div id="observablehq-viewof-scaling-5b11848e"></div>
         <div id="observablehq-heatMap2-de6eb79b"></div>
+      </section>
+
+      <section id="time_facets">
+        <h1>6. Time Facets</h1>
+        <div id="observablehq-viewof-selectedField-6e7625a6"></div>
+        <div id="observablehq-viewof-selectedFill-7488753a"></div>
+        <div class="lilhisto_container">
+          <div>
+            <div id="observablehq-notVeryDynamic-a28a2397"></div>
+          </div>
+          <div class="lilhisto">
+            <div id="observablehq-smallHisto-1b48a6b2"></div>
+          </div>
+        </div>
+        <div id="observablehq-viewof-x_facet-64c27e98"></div>
+        <div id="observablehq-viewof-y_facet-f89fca7b"></div>
+        <div id="observablehq-viewof-timeFacetSelectedFill-192b4b5b"></div>
+        <div id="observablehq-resolvedFacetPlot-40273e76"></div>
       </section>
 
     </div>
@@ -345,6 +357,22 @@ new Runtime().module(define, name => {
   if (name === "smallHisto")
     return new Inspector(document.querySelector(
       "#observablehq-smallHisto-1b48a6b2"
+    ));
+  if (name === "viewof x_facet")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-x_facet-64c27e98"
+    ));
+  if (name === "viewof y_facet")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-y_facet-f89fca7b"
+    ));
+  if (name === "viewof timeFacetSelectedFill")
+    return new Inspector(document.querySelector(
+      "#observablehq-viewof-timeFacetSelectedFill-192b4b5b"
+    ));
+  if (name === "resolvedFacetPlot")
+    return new Inspector(document.querySelector(
+      "#observablehq-resolvedFacetPlot-40273e76"
     ));
   return [
     "study_data",
