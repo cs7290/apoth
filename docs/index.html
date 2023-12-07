@@ -132,6 +132,12 @@
         </div>
         <div id="observablehq-findingsDesc1-0a623c4a"></div>
         <div id="observablehq-socialContextHisto-7c36e15e"></div>
+        <p>
+          About half of all surveys were completed alone, with a relatively equal balance among the remaining social contexts.
+        </p>
+        <p>
+          The strongest correlations we found among all the affect scores measured were quite strong and shared by 3 dimensions of affect:
+        </p>
         <div class="row">
           <div id="observablehq-angrySadHeatMap-c18001ed" class="col-md-4"></div>
           <div id="observablehq-sadHopelessHeatMap-5d4e6ad4" class="col-md-4"></div>
@@ -141,6 +147,9 @@
 
       <section id="ppt_stats">
         <h1>2. User Stats</h1>
+        <p>
+          To get a sense of clusters and sub-populations, we created a tool for viewing population-level stats, aggregated per user:
+        </p>
         <div id="observablehq-viewof-selected_feat-061c3e4d"></div>
         <div id="observablehq-viewof-selected_agg-6671b713"></div>
         <div id="observablehq-perUserHisto-5434b4b1"></div>
@@ -148,13 +157,22 @@
 
       <section id="participation">
         <h1>3. Participation</h1>
-        <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
-        <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
         <p>
-          Given such a small dataset with such a tight range of dates, the participation trend per calendar day is not distinct from the participation trend per day in study. In practice, we expect to detect different effects in these two plots.
+          To get a sense of macro effects due to external events (e.g. seasons), we created a tool to show total participation over time:
+        </p>
+        <div id="observablehq-dailyParticipationPerCalendar-e9ff64f8"></div>
+        <p>
+          To get a sense of macro effects due relative to the life of the study, we created a tool to show total participation relative to the start of study:
+        </p>
+        <div id="observablehq-dailyParticipationPerOffset-94f28045"></div>
+        <p style="font-style: italic">
+          NOTE: Given such a small dataset with such a tight range of dates, the participation trend per calendar day is not distinct from the participation trend per day in study. In practice, we expect to detect different effects in these two plots.
         </p>
 
         <!-- user trend -->
+        <p>
+          We created another view of participation trends, with the current user plotted against all others in the dataset:
+        </p>
         <div id="observablehq-viewof-windowSize-e765f382"></div>
         <div id="observablehq-viewof-windowAnchor-75094542"></div>
         <div id="observablehq-viewof-window_options-e2e6c956"></div>
@@ -173,6 +191,10 @@
           <div id="observablehq-followupsHistoHorizontal-9bb64fd0" class="col-md-6"></div>
         </div>
         <div id="observablehq-viewof-show_selected_ppt_selection-6121c191"></div>
+        <br>
+        <p style="font-style: italic">
+          NOTE: I need to think more about what this plot of (inter|intra)-day response gaps might be telling us. It does show some structure, including three possible clusters. Mainly, I would say that these two dimension capture distinct information.
+        </p>
 
       </section>
 
@@ -212,7 +234,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3873">Apoth Development</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3890">Apoth Development, Inc.</a></p>
         </p>
       </div>
     </div>
@@ -220,7 +242,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3873.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3890.js?v=4";
 new Runtime().module(define, name => {
   if (name === "egStory")
     return new Inspector(document.querySelector(
