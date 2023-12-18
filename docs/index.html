@@ -234,7 +234,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3890">Apoth Development, Inc.</a></p>
+        <p>Credit: <a href="https://observablehq.com/@class/apoth-development@3952">Apoth Development, Inc.</a></p>
         </p>
       </div>
     </div>
@@ -242,7 +242,7 @@
 
     <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@class/apoth-development@3890.js?v=4";
+import define from "https://api.observablehq.com/@class/apoth-development@3952.js?v=4";
 new Runtime().module(define, name => {
   if (name === "egStory")
     return new Inspector(document.querySelector(
@@ -397,48 +397,48 @@ new Runtime().module(define, name => {
       "#observablehq-resolvedFacetPlot-40273e76"
     ));
   return [
-    "study_data",
-    "engagement_stats_per_day",
-    "stats_per_day_ppt",
-    "selectable",
-    "stats_per_feature",
-    "stats_per_user",
-    "daily_response_count_per_user",
     "affect_daily_summary",
-    "heatMap2",
-    "dynamic_feats",
-    "study_data_dropna",
+    "at_least_one_significant_response_gap",
+    "averageWindow",
+    "continuous",
+    "daily_response_count_per_user",
+    "daily_response_counts",
     "dailyParticipationPerCalendar",
     "dailyParticipationPerOffset",
-    "at_least_one_significant_response_gap",
-    "total_lapses",
+    "discrete",
+    "dropout_stats",
+    "dynamic_feats",
+    "dynamic_legend",
+    "engagement_stats_per_day",
+    "gapsVsFollowups",
+    "heatMap2",
+    "interVsIntra",
     "never_returned",
+    "notVeryDynamic",
+    "perUserHisto",
+    "ppt_ids",
+    "ppt_windowed_marks",
+    "select_ppt_listener",
+    "selectable",
+    "show_selected_ppt",
+    "social_context_props",
+    "stats_per_day_ppt",
+    "stats_per_feature",
+    "stats_per_user",
+    "study_data",
+    "study_data_dropna",
+    "total_lapses",
     "ultimately_returned",
     "user_stats",
-    "ppt_ids",
-    "social_context_props",
-    "daily_response_counts",
-    "window_stats",
-    "viewof selection",
     "viewof heatX",
     "viewof heatY",
-    "dropout_stats",
     "viewof selected_ppt_id",
-    "averageWindow",
-    "windowPlot",
-    "windowSvg",
+    "viewof selection",
     "window_marks_per_ppt",
-    "dynamic_legend",
-    "select_ppt_listener",
+    "window_stats",
+    "windowPlot",
     "windowPlotD3",
-    "ppt_windowed_marks",
-    "perUserHisto",
-    "notVeryDynamic",
-    "discrete",
-    "continuous",
-    "show_selected_ppt",
-    "gapsVsFollowups",
-    "interVsIntra"
+    "windowSvg"
   ].includes(name);
 });
     </script>
